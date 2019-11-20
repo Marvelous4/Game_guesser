@@ -3,9 +3,16 @@ use std::cmp::Ordering;
 use rand::Rng;
 
 fn main() {
-    println!("Guess the number!");
-
     let secret_number = rand::thread_rng().gen_range(1, 101);
+
+    if secret_number%2 == 0 {
+        println!("The number is an even number");
+    }
+    else {
+        println!("The number is an odd number");
+    }
+
+    println!("Guess the number!");
 
     loop {
         println!("Please input your guess.");
